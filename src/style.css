@@ -1,0 +1,345 @@
+body{
+  margin: 0 auto;
+}
+#root{
+  margin: 0 100px 0 100px;
+  text-align: center;
+  min-width: 700px;
+}
+
+.content{
+  height: 500px;
+  width: 700px;
+  margin: 50px auto;
+  
+  
+}
+
+.hurryup{
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.hurry{
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 700px;
+  animation-name: hurryup;
+  animation-duration: 0.7s;
+  animation-iteration-count: 7;
+}
+
+#info{
+  display: inline-flex;       
+  justify-content: space-between;
+  width:700px;
+  margin-top: 30px;
+  font-size: 30px;
+  position: relative;
+  animation-name: opacity;
+  animation-duration: 10s;
+  
+
+}
+.infos{
+  box-shadow: 5px 5px 10px;
+}
+#score, #bestscore{
+  margin-left: 5px;
+  
+}
+
+
+
+.timer{
+  
+  font-size: 60px;
+  position: absolute;
+  left: 320px;
+  bottom:-9px;
+}
+
+
+
+
+
+.endtime{
+  font-size: 70px;
+  position: absolute;
+  left: 320px;
+  bottom:-9px;
+  padding-top: 30px;
+  font-weight: bolder;
+  color: red;
+
+}
+
+.Game {
+  width: 700px;
+  height: 400px;
+  margin-top: 5px;
+  position: relative;
+  border: 3px solid rgb(0, 0, 0);
+  box-shadow: 30px 30px 70px grey;
+  box-sizing: border-box;
+  animation-name: divrotate;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+}
+/* question block*/
+.start{
+  width: 250px;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(4, 177, 4);
+  position: absolute;
+  top: 157px;
+  left: 222px;
+  border-radius:25px;
+  padding-top: 25px;
+  box-sizing: border-box;
+  font-size: x-large;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 25px 25px 50px grey; 
+  animation-name: questiondivrotate;
+  animation-duration: 4s; 
+  
+
+  
+  
+
+}
+.question{
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 147px;
+  left: 197px;
+  border-radius:100px;
+  padding-top: 35px;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: darkgrey;
+  box-shadow: 10px 10px 50px;
+  background-color: rgb(114,111,111);
+
+  
+  
+}
+.gameover{
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 36, 36);
+  position: absolute;
+  top: 147px;
+  left: 197px;
+  border-radius:25px;
+  border: 1px solid black;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  box-shadow: 0px 0px 120px;
+  font-weight: bolder;
+  animation-name: gameover;
+  animation-duration: 3s;
+     
+}
+.start:hover{
+  background-color: rgb(196, 195, 195);
+  color: black;
+
+}
+
+/* buttons  block*/
+#btnblock{
+  display: none;
+}
+/*buttons css*/
+.btnanswer{
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  font-weight: bolder;
+  font-size: x-large;
+  cursor: pointer;
+  background-color: darkgrey;
+  font-size: 35px;
+  font-weight: bold;
+  box-sizing: border-box;
+  outline: none;
+  border-color: rgb(177, 177, 177);
+  
+ 
+
+}
+.btnanswer:hover{
+  background-color: rgb(179, 179, 179); 
+  animation-name: btnhover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  
+
+}
+
+.trueanswer{
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  font-weight: bolder;
+  font-size: x-large;
+  cursor: pointer;
+  background-color: darkgrey;
+  font-size: 35px;
+  font-weight: bold;
+  box-sizing: border-box;
+  outline: none;
+  border-color: rgb(177, 177, 177);
+  animation-name: trueAnswer;
+  animation-duration: 4s;
+}
+
+.falseanswer{
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  font-weight: bolder;
+  font-size: x-large;
+  cursor: pointer;
+  background-color: darkgrey;
+  font-size: 35px;
+  font-weight: bold;
+  box-sizing: border-box;
+  outline: none;
+  border-color: rgb(177, 177, 177);
+  animation-name: falseAnswer;
+  animation-duration: 4s;
+}
+
+:disabled{
+  pointer-events: none;
+
+}
+
+
+#answ0{
+ left: 0;
+ box-shadow: 10px 10px 10px;
+ border-bottom-right-radius: 15px;
+
+
+}
+
+#answ1{
+  right: 0;
+  box-shadow: -10px 10px 10px;
+  border-bottom-left-radius: 15px;
+  
+  
+}
+#answ2{
+  right: 0;
+  bottom: 0;
+  box-shadow: -10px -10px 10px;
+  border-top-left-radius: 15px;
+  
+}
+#answ3{
+  left: 0;
+  bottom: 0;
+  box-shadow: 10px -10px 10px;
+  border-top-right-radius: 15px;
+  
+
+}
+
+
+@keyframes trueAnswer {
+  from {background-Color: rgb(0, 161, 48);}
+  to {background-color: rgb(0, 255, 0);}
+}
+@keyframes falseAnswer {
+  from {background-Color: rgb(148, 0, 0);}
+  to {background-color: rgb(255, 4, 4);}
+}
+
+@keyframes divrotate {
+  from{
+      width:0px;
+      height:0px;
+      transform: rotate(0deg);
+  }
+  to{ 
+      width:700px;
+      height:400px;
+      transform: rotate(360deg);
+      
+  }
+}
+
+@keyframes gameover{
+  from{
+      width:0px;
+      height:0px;
+      transform: rotate(0deg);
+      font-size: 0px;
+  }
+  to{ 
+      transform: rotate(360deg);
+      width:300px;
+      height:100px;
+      font-size: 20px;
+        
+  }
+}
+
+
+
+@keyframes questiondivrotate {
+  from{
+      transform: rotate(0deg);;
+  }
+  to{
+   
+      transform: rotate(360deg);
+      
+  }
+}
+@keyframes answerbtn {
+  from{
+      width: 0px;
+      height: 0px;
+      font-size: 0px;
+  }
+  to{
+      width: 150px;
+      height:100px;
+      font-size: 35px;
+  }
+}
+@keyframes btnhover {
+  from{
+      width: 150px;
+      height: 100px;
+  }
+  to{
+      width: 170px;
+      height: 120px;
+  }
+}
+@keyframes opacity{
+  from{
+      opacity: 0;
+  }
+  to {opacity: 1;}
+}
+@keyframes hurryup{
+  from{
+      color: rgb(255, 255, 255);
+  }
+  to {color: red;}
+}
